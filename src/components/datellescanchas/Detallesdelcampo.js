@@ -64,7 +64,7 @@ function Detallesdelcampo() {
 
             <div className="mt-4">
               <label className="block text-gray-600 mb-2" htmlFor="encounterType">
-                Tipo de encuentro
+                Selecciona el tipo de encuentro
               </label>
               <select
                 id="encounterType"
