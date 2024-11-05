@@ -1,24 +1,73 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import Header from "./components/Header";
+import Slider from "./components/Slider";
+import Form from "./components/Form";
+import Steps from "./components/Steps";
+import Footer from "./components/Footer";
+import Acercade from "./components/Acercade";
+import Centro from "./components/Centro";
+import Whatsapp from "./components/Whatsapp";
+import Terminos from "./components/terminos_politicas_contacto/Terminos";
+import Privacidad from "./components/terminos_politicas_contacto/Privacidad";
+import Contacto from "./components/terminos_politicas_contacto/Contacto";
+import SearchResults from "./components/datellescanchas/searchResults";
+import Detallesdelcampo from "./components/datellescanchas/Detallesdelcampo";
+import Login from "./components/login_y_registro/login";
+import Registro from "./components/login_y_registro/registro";
+
+function MainContent({ acercadeRef, centroRef }) {
+  const excludedRoutes = ["/terminos", "/privacidad", "/contacto", "/login", "/registro"];
+  const location = useLocation();
+  const isInitialScreen = location.pathname === "/";
+  const showForm = !excludedRoutes.includes(location.pathname);
+
+  return (
+    <main className="p-4">
+      <Slider />
+      {showForm && <Form />} 
+      {isInitialScreen && <Steps />}
+      {isInitialScreen && <Acercade ref={acercadeRef} />}
+      {isInitialScreen && <Centro ref={centroRef} />}
+      {isInitialScreen && <Whatsapp />}
+    </main>
+  );
+}
 
 function App() {
+  const acercadeRef = useRef(null); 
+  const centroRef = useRef(null);
+
+  const scrollToAcercade = () => {
+    if (acercadeRef.current) {
+      acercadeRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToCentro = () => {
+    if (centroRef.current) {
+      centroRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="min-h-screen bg-gray-100">
+        <Header onScrollToAcercade={scrollToAcercade} onScrollToCentro={scrollToCentro} />
+        <MainContent acercadeRef={acercadeRef} centroRef={centroRef} />
+        <Routes>
+          <Route path="/" element={<div />} /> 
+          <Route path="/resultado" element={<SearchResults />} />
+          <Route path="/terminos" element={<Terminos />} />
+          <Route path="/privacidad" element={<Privacidad />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/Detallesdelcampo" element={<Detallesdelcampo />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/registro" element={<Registro />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
