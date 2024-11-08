@@ -17,7 +17,6 @@ import Login from "./components/login_y_registro/login";
 import Registro from "./components/login_y_registro/registro";
 import PanelUsuario from "./components/dashboard/PanelUsuario";
 import FormPlantillas from "./components/dashboard/contenidopanelusu/FormPlantilla";
-import Responsive from "./components/Responsive";
 
 
 function MainContent({ acercadeRef, centroRef }) {
@@ -33,7 +32,6 @@ function MainContent({ acercadeRef, centroRef }) {
       {isInitialScreen && <Steps />}
       {isInitialScreen && <Acercade ref={acercadeRef} />}
       {isInitialScreen && <Centro ref={centroRef} />}
-      {isInitialScreen && <Responsive />}
       {isInitialScreen && <Whatsapp />}
     </main>
   );
