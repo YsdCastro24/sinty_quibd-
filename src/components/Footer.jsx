@@ -6,7 +6,7 @@ function Footer() {
     <footer className="bg-[#0F4767] text-white py-9">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 px-4">
         {/* Logo */}
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center justify-start md:justify-center w-full md:w-auto space-x-1">
           <img src="/logo2.webp" alt="Logo" className="h-20" /> {/* Cambia la ruta de la imagen */}
         </div>
 

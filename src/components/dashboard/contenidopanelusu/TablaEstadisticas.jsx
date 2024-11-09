@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function TablaEstadisticas() {
+
+  useEffect(() => {
+    document.title = "Sinty Quibdó | Taba De Estadisticas";
+  }, []);
+
   return (
     <div className="space-y-6">
       <section className="bg-gray-300 p-4 rounded-lg">

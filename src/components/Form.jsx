@@ -56,7 +56,7 @@ function Form() {
             <option>23:30</option>
           </select>
         </div>
-        <button type="submit" className="bg-[#4C9FCE] text-black font-semibold border-white-700 w-32 rounded p-2 hover:bg-blue-500 transition duration-200 lg:relative lg:left-[114px] top-11px">
+        <button type="submit" className="bg-[#3468C0] text-black font-semibold border-white-700 w-82 rounded p-2 hover:bg-blue-500 transition duration-200 lg:relative lg:left-[114px] top-11px">
           Buscar
         </button>
       </form>

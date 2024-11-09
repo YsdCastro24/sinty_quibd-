@@ -20,13 +20,13 @@ function Slider() {
   }, [images.length]);
 
   return (
-    <div className="slider-container bg-gray-200 w-full my-4 relative">
+    <div className="slider-container bg-gray-200 w-full my-4 relative rounded-lg overflow-hidden">
       {/* Imagen actual */}
       <div className="flex justify-center items-center h-full">
         <img
           src={images[currentIndex]}
           alt={`Slide ${currentIndex}`}
-          className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover"
+          className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover rounded-lg"
         />
       </div>
       

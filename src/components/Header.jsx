@@ -11,19 +11,19 @@ function Header({ onScrollToAcercade, onScrollToCentro }) {
   return (
     <header className="bg-white shadow-md py-4">
       <nav className="bg-white border-gray-200">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className=" flex flex-wrap items-center justify-between mx-auto p-10">
           <a href="/" className="flex items-center space-x-3 overflow-visible">
             <img src="/logo2.webp" className="h-24 animate-shake" alt="Sinty Quibdó" />
           </a>
           <button
             onClick={toggleMenu}
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className="inline-flex items-center w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="navbar-default"
             aria-expanded={isMenuOpen}
           >
             <span className="sr-only">Open main menu</span>
             <svg
-              className="w-5 h-5"
+              className="w-10 h-10"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -66,7 +66,7 @@ function Header({ onScrollToAcercade, onScrollToCentro }) {
                   to="/login"
                   className="block py-2 px-3 text-[#294BA1] rounded hover:text-[#0F4767]"
                 >
-                  <img src="/login.webp" className="h-12 animate-shake" alt="Sinty Quibdó" />
+                  <img src="/login.webp" className="h-24 animate-shake" alt="Sinty Quibdó" />
                 </Link>
               </li>
             </ul>

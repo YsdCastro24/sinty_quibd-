@@ -17,10 +17,12 @@ import Login from "./components/login_y_registro/login";
 import Registro from "./components/login_y_registro/registro";
 import PanelUsuario from "./components/dashboard/PanelUsuario";
 import FormPlantillas from "./components/dashboard/contenidopanelusu/FormPlantilla";
+import VerReservas from "./components/dashboard/contenidopanelusu/Reservas";
+import RegistroJugadores from "./components/dashboard/contenidopanelusu/Registroplantill";
 
 
 function MainContent({ acercadeRef, centroRef }) {
-  const excludedRoutes = ["/terminos", "/privacidad", "/contacto", "/login", "/registro", "/panelusuario", "/formplantilla"]; // Añadir "/panelusuario"
+  const excludedRoutes = ["/terminos", "/privacidad", "/contacto", "/login", "/registro", "/panelusuario", "/formplantilla", "/ver-reservas", "/registrojugadores"]; // Añadir "/panelusuario"
   const location = useLocation();
   const isInitialScreen = location.pathname === "/";
   const showForm = !excludedRoutes.includes(location.pathname);
@@ -69,7 +71,9 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/registro" element={<Registro />} />
           <Route path="/panelusuario" element={<PanelUsuario />} />
+          <Route path="/ver-reservas" element={<VerReservas />} />
           <Route path="/formplantilla" element={<FormPlantillas />} />
+          <Route path="/registrojugadores" element={<RegistroJugadores />} />
         </Routes>
         <Footer />
       </div>

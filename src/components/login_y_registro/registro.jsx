@@ -33,8 +33,8 @@ function Registro() {
         className="absolute inset-0"
         style={{
           background: 'radial-gradient(#e5e7eb 1px, transparent 1px)',
-          backgroundSize: '20px 20px', // Tamaño del patrón
-          filter: 'brightness(0.9)', // Oscurece un poco el fondo
+          backgroundSize: '20px 20px', 
+          filter: 'brightness(0.9)', 
         }}
       ></div>
 
@@ -145,3 +145,9 @@ function Registro() {
 }
 
 export default Registro;
+
+
+
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d63141782.45133463!2d-2.970703!3d15!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1731103338250!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
