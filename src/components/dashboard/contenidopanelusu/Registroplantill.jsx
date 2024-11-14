@@ -64,7 +64,7 @@ function RegistroJugadores() {
             <div>
               <label htmlFor="numeroDocumento" className="block text-gray-600">Número de Documento</label>
               <input
-                type="text"
+                type="number"
                 id="numeroDocumento"
                 name="numeroDocumento"
                 value={formData.numeroDocumento}

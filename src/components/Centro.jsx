@@ -18,7 +18,7 @@ const Centro = forwardRef((props, ref) => {
   const whatsappMessage = encodeURIComponent(greetingMessage);
 
   return (
-    <div ref={ref} className="text-center bg-[#0F4767] text-white py-6 my-8 rounded-lg">
+    <div ref={ref} className="text-center shadow-md bg-[#0F4767] text-white py-6 my-8 rounded-lg">
       <h2 className="text-xl font-semibold">Si eres un Centro Deportivo y deseas más información</h2>
       <p className="mt-1">Escríbenos en WhatsApp, un asesor estará contigo.</p>
       <p className="mt-2">Estamos aquí para resolver todas tus dudas y ayudarte a aprovechar al máximo nuestros servicios, No dudes en contactarnos. <br/>  <strong>¡tu satisfacción es nuestra prioridad!</strong></p>

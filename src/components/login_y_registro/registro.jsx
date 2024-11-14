@@ -38,7 +38,7 @@ function Registro() {
         }}
       ></div>
 
-      <div className="relative z-10 bg-white p-10 rounded-lg shadow-md py-9 max-w-md w-full">
+      <div className="relative z-10 bg-white p-10 rounded-lg shadow-md py-10 max-w-md w-full">
         <h2 className="text-2xl font-bold mb-4 text-center">Registro</h2>
 
         <form onSubmit={handleSubmit}>
@@ -145,9 +145,3 @@ function Registro() {
 }
 
 export default Registro;
-
-
-
-
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d63141782.45133463!2d-2.970703!3d15!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1731103338250!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

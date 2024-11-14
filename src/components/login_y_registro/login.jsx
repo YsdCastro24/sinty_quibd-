@@ -1,14 +1,21 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
+  const { state } = useLocation(); // Recibe el estado, si lo hay (por ejemplo, reserva de cancha)
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Iniciando sesión...");
-    // Redirige al usuario al componente PanelUsuario
-    navigate('/panelusuario'); // Asegúrate de que la ruta coincida con la de App.jsx
+    
+    // Si hay datos de la reserva, los pasamos al método de pago
+    if (state) {
+      navigate('/metodo-de-pago', { state });
+    } else {
+      // Si no hay datos de reserva, navega al panel de usuario
+      navigate('/panelusuario');
+    }
   };
 
   useEffect(() => {

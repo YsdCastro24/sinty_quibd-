@@ -20,11 +20,13 @@ function Detallesdelcampo() {
   }
 
   const handleReserve = () => {
+    // Datos de la reserva, incluyendo los datos de la cancha y el tipo de encuentro
     const reservationData = {
       fieldData,
-      time: fieldData.time,
       encounterType,
     };
+
+    // Redirigir al login y pasar los datos de la reserva
     navigate("/login", { state: reservationData });
   };
 
@@ -39,10 +41,10 @@ function Detallesdelcampo() {
         </button>
 
         <div className="flex flex-col sm:flex-row items-center border-b pb-4 mb-4">
-          <img 
-            src={fieldData.img} 
-            alt={`Cancha ${fieldData.name}`} 
-            className="w-full max-w-[200px] h-auto rounded-lg object-contain mr-4" 
+          <img
+            src={fieldData.img}
+            alt={`Cancha ${fieldData.name}`}
+            className="w-full max-w-[200px] h-auto rounded-lg object-contain mr-4"
           />
 
           <div className="text-center sm:text-left">

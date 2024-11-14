@@ -2,7 +2,7 @@ import React from "react";
 
 function Steps() {
   return (
-    <div className="bg-gray-300 p-8 my-8 rounded-lg">
+    <div className="bg-gray-300 shadow-md p-8 my-8 rounded-lg">
       <h2 className="text-3xl rotate-[-5deg] font-semibold mb-10 text-center">
         Pasos para realizar tu <br />proceso de reserva
       </h2>

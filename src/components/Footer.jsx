@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="bg-[#0F4767] text-white py-9">
+    <footer className="bg-[#0F4767] text-white py-9 padin:0 4px;">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 px-4">
         {/* Logo */}
         <div className="flex items-center justify-start md:justify-center w-full md:w-auto space-x-1">
@@ -25,7 +25,7 @@ function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="text-center font-medium text-xs mt-4">
+      <div className="text-center font-bold text-xs mt-10">
         © {new Date().getFullYear()} Todos los derechos reservados. | Sinty Quibdó.
       </div>
     </footer>
